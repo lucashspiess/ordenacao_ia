@@ -52,11 +52,12 @@ public class Ordenacao {
 
     public static String ordena(String input) {
         String[] entrada = separaString(input);
-        boolean ordenado = true;
+        boolean regraEcontrada = true;
 
-        while(ordenado){
-            ordenado  = encontraRegra(entrada);
+        while(regraEcontrada){
+            regraEcontrada  = encontraRegra(entrada);
         }
+
         return Arrays.toString(entrada);
     }
 }
