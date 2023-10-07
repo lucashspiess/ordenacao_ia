@@ -10,15 +10,15 @@ public class Interface extends JFrame {
         setTitle("Ordenação");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
-        setSize(700, 200);
+        setSize(500, 200);
 
-        JPanel textAreasPanel = new JPanel(new GridLayout(1, 2));
+        JPanel textAreasPanel = new JPanel(new GridLayout(2, 1));
         JPanel inputPanel = new JPanel(new BorderLayout());
-        inputPanel.add(new JLabel("Input"), BorderLayout.NORTH);
+        inputPanel.add(new JLabel("Desordenado"), BorderLayout.NORTH);
         inputPanel.add(new JScrollPane(txtInput), BorderLayout.CENTER);
 
         JPanel outputPanel = new JPanel(new BorderLayout());
-        outputPanel.add(new JLabel("Output"), BorderLayout.NORTH);
+        outputPanel.add(new JLabel("Ordenado"), BorderLayout.NORTH);
         outputPanel.add(new JScrollPane(txtOutput), BorderLayout.CENTER);
 
         textAreasPanel.add(inputPanel);
@@ -38,5 +38,6 @@ public class Interface extends JFrame {
 
         setLocationRelativeTo(null);
         setVisible(true);
+        this.setResizable(false);
     }
 }
