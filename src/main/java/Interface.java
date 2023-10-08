@@ -5,12 +5,17 @@ public class Interface extends JFrame {
     public Interface() {
         JTextArea txtInput = new JTextArea();
         JTextArea txtOutput = new JTextArea();
+        JTextArea txtRegras = new JTextArea();
         JButton btnOrdenar = new JButton("Ordenar");
 
         setTitle("Ordenação");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
-        setSize(500, 200);
+        setSize(700, 400);
+
+        JPanel geralPanel = new JPanel(new GridLayout(1,2));
+
+        JPanel regrasPanel = new JPanel(new GridLayout(1,1));
 
         JPanel textAreasPanel = new JPanel(new GridLayout(2, 1));
         JPanel inputPanel = new JPanel(new BorderLayout());
@@ -21,19 +26,29 @@ public class Interface extends JFrame {
         outputPanel.add(new JLabel("Ordenado"), BorderLayout.NORTH);
         outputPanel.add(new JScrollPane(txtOutput), BorderLayout.CENTER);
 
+        JPanel regras = new JPanel(new BorderLayout());
+        regras.add(new JLabel("Regras"), BorderLayout.NORTH);
+        regras.add(new JScrollPane(txtRegras), BorderLayout.CENTER);
+
         textAreasPanel.add(inputPanel);
         textAreasPanel.add(outputPanel);
+        regrasPanel.add(regras);
+
+        geralPanel.add(textAreasPanel);
+        geralPanel.add(regrasPanel);
 
         JPanel buttonsPanel = new JPanel(new FlowLayout());
         buttonsPanel.add(btnOrdenar);
 
-        add(textAreasPanel, BorderLayout.CENTER);
+        add(geralPanel, BorderLayout.CENTER);
         add(buttonsPanel, BorderLayout.SOUTH);
 
         btnOrdenar.addActionListener(e -> {
             String input = txtInput.getText();
-            input = Ordenacao.ordena(input);
+            StringBuilder regrasEncontradas =  new StringBuilder();
+            input = Ordenacao.ordena(input, regrasEncontradas);
             txtOutput.setText(input);
+            txtRegras.setText(regrasEncontradas.toString());
         });
 
         setLocationRelativeTo(null);
