@@ -26,11 +26,13 @@ public class Interface extends JFrame {
         JPanel outputPanel = new JPanel(new BorderLayout());
         outputPanel.add(new JLabel("Ordenado"), BorderLayout.NORTH);
         txtOutput.setLineWrap(true);
+        txtOutput.setEditable(false);
         outputPanel.add(new JScrollPane(txtOutput), BorderLayout.CENTER);
 
         JPanel regras = new JPanel(new BorderLayout());
         regras.add(new JLabel("Regras"), BorderLayout.NORTH);
         txtRegras.setLineWrap(true);
+        txtRegras.setEditable(false);
         regras.add(new JScrollPane(txtRegras), BorderLayout.CENTER);
 
         textAreasPanel.add(inputPanel);
