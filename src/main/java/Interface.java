@@ -20,14 +20,17 @@ public class Interface extends JFrame {
         JPanel textAreasPanel = new JPanel(new GridLayout(2, 1));
         JPanel inputPanel = new JPanel(new BorderLayout());
         inputPanel.add(new JLabel("Desordenado"), BorderLayout.NORTH);
+        txtInput.setLineWrap(true);
         inputPanel.add(new JScrollPane(txtInput), BorderLayout.CENTER);
 
         JPanel outputPanel = new JPanel(new BorderLayout());
         outputPanel.add(new JLabel("Ordenado"), BorderLayout.NORTH);
+        txtOutput.setLineWrap(true);
         outputPanel.add(new JScrollPane(txtOutput), BorderLayout.CENTER);
 
         JPanel regras = new JPanel(new BorderLayout());
         regras.add(new JLabel("Regras"), BorderLayout.NORTH);
+        txtRegras.setLineWrap(true);
         regras.add(new JScrollPane(txtRegras), BorderLayout.CENTER);
 
         textAreasPanel.add(inputPanel);
@@ -39,6 +42,7 @@ public class Interface extends JFrame {
 
         JPanel buttonsPanel = new JPanel(new FlowLayout());
         buttonsPanel.add(btnOrdenar);
+        txtRegras.setFont(new Font("Roboto", Font.PLAIN,16));
 
         add(geralPanel, BorderLayout.CENTER);
         add(buttonsPanel, BorderLayout.SOUTH);
