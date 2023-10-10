@@ -3,34 +3,34 @@ import java.util.Arrays;
 public class Ordenacao {
 
     private static final String[][] REGRAS = {
-            {"PV2a", "PV1"},    //regra 1
-            {"PV2b1", "PV1"},   //regra 2
-            {"PV2b", "PV1"},    //regra 3
-            {"PV2", "PV1"},     //regra 4
-            {"PV3a", "PV1"},    //regra 5
-            {"PV3", "PV1"},     //regra 6
-            {"PV4", "PV1"},     //regra 7
-            {"PV2b1", "PV2a"},  //regra 8
-            {"PV2b", "PV2a"},   //regra 9
-            {"PV2", "PV2a"},    //regra 10
-            {"PV3a", "PV2a"},   //regra 11
-            {"PV3", "PV2a"},    //regra 12
-            {"PV4", "PV2a"},    //regra 13
-            {"PV2b", "PV2b1"},  //regra 14
-            {"PV2", "PV2b1"},   //regra 15
-            {"PV3a", "PV2b1"},  //regra 16
-            {"PV3", "PV2b1"},   //regra 17
-            {"PV4", "PV2b1"},   //regra 18
-            {"PV2","PV2b"},     //regra 19
-            {"PV3a", "PV2b"},   //regra 20
-            {"PV3", "PV2b"},    //regra 21
-            {"PV4", "PV2b"},    //regra 22
-            {"PV3a","PV2"},     //regra 23
-            {"PV3","PV2"},      //regra 24
-            {"PV4","PV2"},      //regra 25
-            {"PV3", "PV3a"},    //regra 26
-            {"PV4","PV3a"},     //regra 27
-            {"PV4", "PV3"},     //regra 28
+            {"PV2a", "PV1"},   //regra 1
+            {"PV2b1","PV1"},   //regra 2
+            {"PV2b","PV1"},    //regra 3
+            {"PV2", "PV1"},    //regra 4
+            {"PV3a","PV1"},    //regra 5
+            {"PV3", "PV1"},    //regra 6
+            {"PV4", "PV1"},    //regra 7
+            {"PV2b1","PV2a"},  //regra 8
+            {"PV2b","PV2a"},   //regra 9
+            {"PV2", "PV2a"},   //regra 10
+            {"PV3a","PV2a"},   //regra 11
+            {"PV3", "PV2a"},   //regra 12
+            {"PV4", "PV2a"},   //regra 13
+            {"PV2b","PV2b1"},  //regra 14
+            {"PV2", "PV2b1"},  //regra 15
+            {"PV3a","PV2b1"},  //regra 16
+            {"PV3", "PV2b1"},  //regra 17
+            {"PV4", "PV2b1"},  //regra 18
+            {"PV2", "PV2b"},   //regra 19
+            {"PV3a","PV2b"},   //regra 20
+            {"PV3", "PV2b"},   //regra 21
+            {"PV4", "PV2b"},   //regra 22
+            {"PV3a","PV2"},    //regra 23
+            {"PV3", "PV2"},    //regra 24
+            {"PV4", "PV2"},    //regra 25
+            {"PV3", "PV3a"},   //regra 26
+            {"PV4", "PV3a"},   //regra 27
+            {"PV4", "PV3"},    //regra 28
     };
 
     private static String[] separaString(String entrada) {
